@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .name-title {
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .bold-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .font-16 {
+            font-size: 16px;
+        }
+
+        .font-17 {
+            font-size: 17px;
+        }
+
+        /*plus minus counter input  */
+        .qty .plus {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+            color: #000000;
+            background: #e1e1e1;
+            width: 25px;
+            height: 25px;
+            font: 25px/1 Arial, sans-serif;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .qty .minus {
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+            color: #000000;
+            background: #e1e1e1;
+            width: 25px;
+            height: 25px;
+            font: 25px/1 Arial, sans-serif;
+            text-align: center;
+            border-radius: 50%;
+            background-clip: padding-box;
+        }
+
+        .qty .minus:hover {
+            background-color: #717fe0 !important;
+        }
+
+        .qty .plus:hover {
+            background-color: #717fe0 !important;
+        }
+
+        /*Prevent text selection*/
+        .qty span {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .qty input {
+            border: 1px solid #ccc;
+            width: 30%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .qty nput::-webkit-outer-spin-button,
+        .qty input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .qty input:disabled {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-3">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Tên đề tài</label>
+                    <input type="number" step="0.01" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Lĩnh vực nghiên cứu</label>
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col bold-title">Tự nhiên</div>
+                            <div class="col mb-3">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        Kinh tế, XHNV
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        Sỡ hữu trí tuệ
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col bold-title">Kỹ thuật</div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        An toàn lao động
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        Khác
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col bold-title">Môi trường</div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        Giáo dục
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id=""
+                                            value="checkedValue">
+                                        Khác
+                                        <input type="text" class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Tính cấp thiết</label>
+                    <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Mục tiêu</label>
+                    <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Nội dung chính</label>
+                    <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Sản phẩm và kết quả dự kiến</label>
+                    <div class="col-sm-12 ml-3">
+                        <div>
+                            <label class="font-17" for="exampleFormControlInput1">1. Sản phẩm khoa học:</label>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        bài báo khoa học tạp chí quốc tế</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        bài báo khoa học tạp chí trong nước</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        lượng xuất bản</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-17" for="exampleFormControlInput1">2. Sản phẩm đào tạo:</label>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        sản phẩm chuyên ngành</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        sản phẩm Thạc sĩ</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-6 ml-4">
+                                    <label class="font-weight-light" for="exampleFormControlInput1"><span>- </span>Số
+                                        sản phẩm Thạc sĩ</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="qty">
+                                        <span class="minus">-</span>
+                                        <input type="number" class="count" name="qty" value="0" min="0">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label class="font-17" for="exampleFormControlInput1">3.Sản phẩm ứng dụng:</label>
+                                <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="4"
+                                    placeholder="Mô tả tóm tắt về sản phẩm dự kiến, phạm vi, khả năng và địa chỉ ứng dụng"></textarea>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label class="font-17" for="exampleFormControlInput1">4.Sản phẩm khác:</label>
+                                <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="4"
+                                    placeholder="Mô tả tóm tắt về sản phẩm"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Hiệu quả dự kiến</label>
+                    <textarea class="form-control font-16" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                    <label class="name-title" for="exampleFormControlInput1">Thời gian dự kiến</label>
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected value="1">1 tháng</option>
+                        <option value="3">3 tháng</option>
+                        <option value="6">6 tháng</option>
+                        <option value="9">9 tháng</option>
+                        <option value="12">12 tháng</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <div class="form-group expense-form">
+                    <label class="name-title" for="exampleFormControlInput1">Nhu cầu kinh phí</label>
+                    <select class="custom-select expense" id="inputGroupSelect02">
+                        <option selected>Chọn mức kinh phí</option>
+                        <option value="1">1,000,000</option>
+                        <option value="3">3,000,000</option>
+                        <option value="6">6,000,000</option>
+                        <option value="9">9,000,000</option>
+                        <option value="diff">Khác</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+            //plus minus counter input
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+            //expense
+            $('.expense').change(function () {
+                let value = $(this).val();
+                if (value == 'diff') {
+                    let input =
+                        '<input type="text" min="1" class="form-control w-50 mt-2 ml-3 expense-diff" name="expense-diff" id="" aria-describedby="helpId" placeholder="Nhập giá trị">'
+                    $('.expense-form').append(input);
+                } else {
+                    $('.expense-diff').remove();
+                }
+            });
+            $('.expense-form').on('keyup', '.expense-diff', function () {
+                // let data = $(this).val();
+                // data=parseInt(data.replace(/\D/g,''),10);
+                // data = new Intl.NumberFormat().format(data);
+                // console.log(data);
+                let data=$(this).val();
+                if(data!=''){
+                    var n = parseInt(data.replace(/\,/g, ''), 10);
+                    $(this).val(n.toLocaleString());
+                }
+                // $(this).val(data);
+            });
+        });
+    </script>
+</body>
+
+</html>
